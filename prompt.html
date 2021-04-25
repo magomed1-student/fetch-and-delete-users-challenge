@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let words = [
+        "макака",
+        "кошка",
+        "картошка",
+        "бытие"
+    ]
+
+    let word = words[Math.floor(Math.random() * words.length)];
+
+    let answerArray = [];
+
+    for (let i = 0; i < word.length; i++) {
+        answerArray[i] = "_";
+    }
+
+    let remainingLetters = word.length;
+
+    while (remainingLetters > 0) {
+        alert(answerArray.join(" "));
+        let guess = prompt("Угадай букву или нажми отмена для выхода из игры")
+        if (guess === null) {
+            break;
+        } else if (guess.length !== 1) {
+            alert("ОДНУ БУКВУ!!!")
+        } else {
+            for (let j = 0; j < word.length; j++) {
+                if (word[j] === guess) {
+                    answerArray[j] = guess;
+                    remainingLetters--;
+                }
+            }
+        }
+    }
+    alert(answerArray.join(" "));
+    alert("Красава, загаданное слово это - " + word);
+
+</script>
+
+</body>
+</html>

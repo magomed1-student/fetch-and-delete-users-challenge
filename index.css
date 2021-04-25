@@ -1,0 +1,11 @@
+.avatar {
+    border-radius: 50px;
+}
+.error {
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
